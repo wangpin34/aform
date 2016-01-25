@@ -15,7 +15,7 @@
 </body>
 <script type="text/javascript" src="aform.js"></script>
 <script type="text/javascript">
-var form = sf.define({
+var form = aform.define({
     username:{
         required:true,
         validate:function(value){
@@ -25,6 +25,5 @@ var form = sf.define({
 });
 form.scan(profile);
 console.log(form.fields);
-
 </script>
 </html>
