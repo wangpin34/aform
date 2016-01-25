@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>测试 smart-form</title>
+</head>
+<body>
+<form id="profile" name="profile">
+<ul>
+<li>账户：<input type="text" name="username" value="remind wang" maxLength="20" /></li>
+<li>密码：<input type="password" name="password" maxLength="6"/></li>
+<li>确认密码：<input type="password" name="confirmpassword" maxLength="6"/></li>
+</ul>
+</form>
+</body>
+<script type="text/javascript" src="aform.js"></script>
+<script type="text/javascript">
+var form = sf.define({
+    username:{
+        required:true,
+        validate:function(value){
+            return true;
+        }
+    }
+});
+form.scan(profile);
+console.log(form.fields);
+
+</script>
+</html>
